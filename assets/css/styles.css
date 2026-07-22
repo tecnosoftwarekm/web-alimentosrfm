@@ -87,8 +87,8 @@ body {
    ========================================== */
 
 .hero {
-  /* Se cambió la capa semitransparente de verde a un tono amarillo/dorado corporativo elegante */
-  background: linear-gradient(rgba(180, 130, 0, 0.82), rgba(140, 100, 0, 0.88)), url('../img/portada.png') center/cover no-repeat;
+  /* Fondo basado en la textura exacta de la etiqueta con un toque semitransparente para legibilidad */
+  background: linear-gradient(rgba(13, 92, 58, 0.75), rgba(13, 92, 58, 0.75)), url('../img/fondo-etiqueta.png') center/cover no-repeat;
   color: white;
   padding: 100px 0;
 }
