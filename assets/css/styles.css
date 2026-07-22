@@ -1,0 +1,148 @@
+/* 1. Desplazamiento suave nativo */
+
+html {
+  scroll-behavior: smooth;
+}
+
+#inicio {
+  min-height: 100vh;
+  padding-top: 100px;
+  scroll-margin-top: 0px;
+}
+
+/* 3. OFFSET EXACTO DE LLEGADA (Esto controla la altura de parada) */
+
+#inicio, #productos, #instagram, #contacto {
+  scroll-margin-top: 150px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  position: relative;
+  padding-top: 0 !important;
+}
+
+.bg-primary-custom {
+  background-color: #0d5c3a;
+}
+
+/* Verde corporativo */
+
+.text-primary-custom {
+  color: #0d5c3a;
+}
+
+.btn-custom {
+  background-color: #f2b705;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #d9a304;
+  color: #fff;
+}
+
+/* ==========================================
+   2. BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================== */
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+.navbar-nav .nav-link-custom {
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+/* Estilo para el botón activo en el Navbar */
+
+.navbar-nav .nav-link.active {
+  background-color: #f2b705 !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  font-weight: 600;
+}
+
+/* Cambio de color al pasar el cursor (Hover) usando el verde corporativo */
+
+.navbar-nav .nav-link-custom:hover {
+  color: #0d5c3a !important;
+  background-color: rgba(13, 92, 58, 0.05);
+}
+
+/* Eliminar el contorno del botón de menú en móviles al hacer clic */
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Estilo para el botón activo en el Navbar */
+
+/* Aplicar fondo a TODOS los botones activos (Manuales y Scrollspy) */
+
+/* ==========================================
+   3. SECCIÓN HERO (BIENVENIDA)
+   ========================================== */
+
+.hero {
+  background: linear-gradient(rgba(13, 92, 58, 0.85), rgba(13, 92, 58, 0.85)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1920') center/cover no-repeat;
+  color: white;
+  padding: 100px 0;
+}
+
+/* ==========================================
+   4. TARJETAS DE PRODUCTOS
+   ========================================== */
+
+.product-card {
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================================
+   5. BOTÓN FLOTANTE DE WHATSAPP
+   ========================================== */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.whatsapp-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Efecto hover sutil para los créditos del programador */
+
+.hover-link {
+  transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+  color: #f2b705 !important;
+}
+
