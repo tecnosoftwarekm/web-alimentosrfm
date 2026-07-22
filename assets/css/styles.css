@@ -87,8 +87,7 @@ body {
    ========================================== */
 
 .hero {
-  /* Fondo basado en la textura exacta de la etiqueta con un toque semitransparente para legibilidad */
-  background: linear-gradient(rgba(13, 92, 58, 0.75), rgba(13, 92, 58, 0.75)), url('../img/fondo-etiqueta.png') center/cover no-repeat;
+  background: linear-gradient(rgba(13, 92, 58, 0.85), rgba(13, 92, 58, 0.85)), url('../img/portada.png') center/cover no-repeat;
   color: white;
   padding: 100px 0;
 }
