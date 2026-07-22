@@ -87,7 +87,8 @@ body {
    ========================================== */
 
 .hero {
-  background: linear-gradient(rgba(13, 92, 58, 0.85), rgba(13, 92, 58, 0.85)), url('../img/portada.png') center/cover no-repeat;
+  /* Se cambió la capa semitransparente de verde a un tono amarillo/dorado corporativo elegante */
+  background: linear-gradient(rgba(180, 130, 0, 0.82), rgba(140, 100, 0, 0.88)), url('../img/portada.png') center/cover no-repeat;
   color: white;
   padding: 100px 0;
 }
