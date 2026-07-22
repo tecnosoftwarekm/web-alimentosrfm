@@ -87,7 +87,7 @@ body {
    ========================================== */
 
 .hero {
-  background: linear-gradient(rgba(13, 92, 58, 0.85), rgba(13, 92, 58, 0.85)), url('../img/portada.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(13, 92, 58, 0.85), rgba(13, 92, 58, 0.85)), url('../img/portada.png') center/cover no-repeat;
   color: white;
   padding: 100px 0;
 }
