@@ -82,16 +82,12 @@ body {
   box-shadow: none;
 }
 
-/* Estilo para el botón activo en el Navbar */
-
-/* Aplicar fondo a TODOS los botones activos (Manuales y Scrollspy) */
-
 /* ==========================================
    3. SECCIÓN HERO (BIENVENIDA)
    ========================================== */
 
 .hero {
-  background: linear-gradient(rgba(13, 92, 58, 0.85), rgba(13, 92, 58, 0.85)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1920') center/cover no-repeat;
+  background: linear-gradient(rgba(13, 92, 58, 0.85), rgba(13, 92, 58, 0.85)), url('../img/portada.jpg') center/cover no-repeat;
   color: white;
   padding: 100px 0;
 }
@@ -145,4 +141,3 @@ body {
 .hover-link:hover {
   color: #f2b705 !important;
 }
-
