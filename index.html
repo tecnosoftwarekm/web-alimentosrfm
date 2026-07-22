@@ -14,17 +14,17 @@
 
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" tabindex="0">
     <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm py-3 navbar-light" id="mainNavbar">
-        <!-- CORRECCIÓN 1: Centrado y posicionamiento de la marca más hacia el medio con w-100 y justify-content-between -->
-        <div class="container-fluid px-lg-4">
-            <a class="navbar-brand d-flex align-items-center gap-3 text-primary-custom me-auto" href="#" style="color:rgb(3,3,3);">
+        <!-- CORRECCIÓN 1: Contenedor reestructurado para centrar el logo y la marca hacia el medio -->
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center gap-3 text-primary-custom mx-auto mx-lg-0" href="#" style="color:rgb(3,3,3);">
                 <img src="assets/img/logoRfm.png" width="90" height="90" alt="Logo de RFM" style="object-fit: contain;">
                 <h3 class="fw-bold m-0 fs-3">Alimentos y Suministros RFM, C.A</h3>
             </a>
-            <button class="navbar-toggler border-0 shadow-none" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0 shadow-none position-absolute end-0 me-3" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
-                <ul class="navbar-nav fw-semibold align-items-center gap-2 ms-auto mt-3 mt-lg-0">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fw-semibold align-items-center gap-2 mt-3 mt-lg-0">
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 active nav-link-custom" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="nosotros.html">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 active nav-link-custom" href="index.html#productos">Productos</a></li>
@@ -38,8 +38,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <!-- CORRECCIÓN 2: Texto de Agroil ajustado a formato tipo título (Solo la A en mayúscula) -->
-                    <h1 class="fw-bold" style="font-family: 'Fredoka', sans-serif; font-size: 6rem; color: rgb(242, 183, 5); line-height: 1; margin-bottom: 0.5rem; letter-spacing: 1px;">Agroil</h1>
+                    <!-- CORRECCIÓN 2: Agroil en blanco con contorno/borde verde y sombra idéntico a la etiqueta del producto -->
+                    <h1 class="fw-bold" style="font-family: 'Fredoka', sans-serif; font-size: 6rem; color: #FFFFFF; -webkit-text-stroke: 2px #0E6229; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1; margin-bottom: 0.5rem; letter-spacing: 1px;">Agroil</h1>
                     <h2 class="display-5 fw-bold mb-3 text-white">la mejor calidad para tu hogar</h2>
                     <p class="lead mb-4 text-white">Procesamos y comercializamos productos con los más altos estándares del mercado nacional.</p>
                     <a class="btn btn-lg shadow mb-3 mb-md-0 px-4 btn-custom" role="button" href="#contacto" style="background: rgb(242, 183, 5); color: white; border: none;">Contáctanos</a>
