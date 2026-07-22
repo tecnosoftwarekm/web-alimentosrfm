@@ -87,7 +87,8 @@ body {
    ========================================== */
 
 .hero {
-  background: linear-gradient(rgba(13, 92, 58, 0.85), rgba(13, 92, 58, 0.85)), url('../img/portada.png') center/cover no-repeat;
+  /* Fondo basado en la textura exacta de la etiqueta con una capa semitransparente verde corporativa para legibilidad */
+  background: linear-gradient(rgba(13, 92, 58, 0.75), rgba(13, 92, 58, 0.75)), url('../img/fondo-etiqueta.png') center/cover no-repeat;
   color: white;
   padding: 100px 0;
 }
@@ -111,7 +112,38 @@ body {
 }
 
 /* ==========================================
-   4. TARJETAS DE PRODUCTOS
+   4. NUEVA SECCIÓN DE HISTORIA E INSTALACIONES
+   ========================================== */
+.about-section {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.about-img-wrapper {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.about-img-wrapper img {
+  transition: transform 0.5s ease;
+}
+
+.about-img-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+.feature-pill {
+  background: rgba(13, 92, 58, 0.05);
+  border-left: 4px solid #0d5c3a;
+  padding: 12px 15px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 10px;
+}
+
+/* ==========================================
+   5. TARJETAS DE PRODUCTOS
    ========================================== */
 
 .product-card {
@@ -125,7 +157,7 @@ body {
 }
 
 /* ==========================================
-   5. BOTÓN FLOTANTE DE WHATSAPP
+   6. BOTÓN FLOTANTE DE WHATSAPP
    ========================================== */
 
 .whatsapp-btn {
