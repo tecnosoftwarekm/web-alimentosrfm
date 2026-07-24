@@ -6,7 +6,7 @@ html {
 
 #inicio {
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: 130px; /* Mayor espacio superior en móviles para que no pegue del menú */
   scroll-margin-top: 0px;
 }
 
@@ -80,6 +80,21 @@ body {
 
 .navbar-toggler:focus {
   box-shadow: none;
+}
+
+/* Corrección responsiva para que el texto largo de la marca no se corte en celulares */
+@media (max-width: 991.98px) {
+  .navbar-brand h3 {
+    font-size: 1.1rem !important;
+    white-space: normal !important;
+    line-height: 1.2;
+  }
+  .navbar-brand {
+    gap: 10px !important;
+  }
+  #inicio {
+    padding-top: 140px;
+  }
 }
 
 /* ==========================================
