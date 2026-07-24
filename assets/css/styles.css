@@ -164,7 +164,7 @@ body {
 }
 
 /* ==========================================
-   5. SECCIÓN DE PRODUCTOS (ESTÉTICA, BORDES REDONDEADOS Y ZOOM)
+   5. SECCIÓN DE PRODUCTOS (IMAGEN HORIZONTAL AJUSTADA AL CUADRO)
    ========================================== */
 
 #productos {
@@ -174,38 +174,22 @@ body {
 
 .product-card-img-only {
   background: #ffffff;
-  border-radius: 20px !important; /* Bordes redondeados más estéticos */
+  border-radius: 20px !important; /* Bordes redondeados estéticos */
   border: 2px solid rgba(13, 92, 58, 0.1) !important; /* Borde sutil y limpio */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04) !important;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  min-height: 320px;
+  padding: 0px; /* Sin relleno para que la imagen cubra todo el cuadro */
   transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
 }
 
-/* Efecto de brillo circular detrás de cada botella */
-.product-card-img-only::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(243, 112, 34, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-  border-radius: 50%;
-  z-index: 0;
-}
-
 .product-card-img-only img {
-  max-height: 270px;
-  object-fit: contain;
-  position: relative;
-  z-index: 1;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Ajusta la imagen cubriendo todo el cuadro */
   transition: transform 0.4s ease-in-out;
 }
 
@@ -217,7 +201,7 @@ body {
 }
 
 .product-card-img-only:hover img {
-  transform: scale(1.08); /* Acerca la botella de forma elegante */
+  transform: scale(1.05); /* Zoom elegante al pasar el cursor */
 }
 
 /* ==========================================
