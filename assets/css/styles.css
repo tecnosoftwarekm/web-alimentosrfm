@@ -126,7 +126,7 @@ body {
 }
 
 /* ==========================================
-   4. NUEVA SECCIÓN DE HISTORIA E INSTALACIONES (CARRUSEL VERTICAL)
+   4. SECCIÓN DE HISTORIA E INSTALACIONES (CARRUSEL)
    ========================================== */
 .about-section {
   background-color: #ffffff;
@@ -138,12 +138,20 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  background-color: #111;
 }
 
+.about-img-wrapper img {
+  transition: transform 0.5s ease;
+}
+
+.about-img-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+/* Clase restaurada al formato original con object-fit: cover y altura perfecta */
 .vertical-carousel-img {
-  height: 550px !important;
-  object-fit: contain !important;
+  height: 450px !important;
+  object-fit: cover !important;
   width: 100%;
 }
 
