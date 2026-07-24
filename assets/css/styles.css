@@ -6,7 +6,7 @@ html {
 
 #inicio {
   min-height: 100vh;
-  padding-top: 130px; /* Mayor espacio superior en móviles para que no pegue del menú */
+  padding-top: 130px;
   scroll-margin-top: 0px;
 }
 
@@ -50,7 +50,7 @@ body {
    ========================================== */
 
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 75px;
 }
 
 .navbar-nav .nav-link-custom {
@@ -82,7 +82,7 @@ body {
   box-shadow: none;
 }
 
-/* Corrección responsiva para que el texto largo de la marca no se corte en celulares */
+/* Corrección responsiva para móviles */
 @media (max-width: 991.98px) {
   .navbar-brand h3 {
     font-size: 1.1rem !important;
@@ -138,12 +138,12 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  background-color: #111; /* Fondo elegante para las barras laterales de fotos verticales */
+  background-color: #111;
 }
 
 .vertical-carousel-img {
-  height: 550px !important; /* Mayor altura para destacar fotos verticales */
-  object-fit: contain !important; /* Evita que la foto se recorte o deforme */
+  height: 550px !important;
+  object-fit: contain !important;
   width: 100%;
 }
 
