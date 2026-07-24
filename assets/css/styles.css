@@ -83,7 +83,7 @@ body {
   box-shadow: none;
 }
 
-/* Corrección responsiva para móviles */
+/* Corrección responsiva para móviles (Logo grande y espacio perfecto para Agroil) */
 @media (max-width: 991.98px) {
   .navbar-brand h3 {
     font-size: 1.1rem !important;
@@ -94,7 +94,7 @@ body {
     gap: 10px !important;
   }
   #inicio {
-    padding-top: 140px;
+    padding-top: 180px !important;
   }
 }
 
@@ -164,17 +164,53 @@ body {
 }
 
 /* ==========================================
-   5. TARJETAS DE PRODUCTOS
+   5. SECCIÓN DE PRODUCTOS (MEJORADA CON FONDO Y BRILLO TRIDIMENSIONAL)
    ========================================== */
 
+#productos {
+  background: linear-gradient(135deg, #f9fbf9 0%, #f4f7f4 100%) !important;
+  position: relative;
+}
+
 .product-card {
-  border: none;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  background: #ffffff;
+  border-radius: 16px !important;
+  border: 1px solid rgba(13, 92, 58, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de iluminación circular detrás de cada botella en las tarjetas */
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(243, 112, 34, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.product-card img, .product-card .card-body {
+  position: relative;
+  z-index: 1;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(13, 92, 58, 0.12) !important;
+  border-color: rgba(243, 112, 34, 0.3) !important;
+}
+
+.product-card .card-title {
+  color: #0d5c3a;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 /* ==========================================
