@@ -33,15 +33,16 @@ body {
   color: #0d5c3a;
 }
 
+/* Naranja exacto del logo (RFM) */
 .btn-custom {
-  background-color: #f2b705;
+  background-color: #f37022;
   color: #fff;
   font-weight: 600;
   border: none;
 }
 
 .btn-custom:hover {
-  background-color: #d9a304;
+  background-color: #d65d1b;
   color: #fff;
 }
 
@@ -58,10 +59,10 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Estilo para el botón activo en el Navbar */
+/* Estilo para el botón activo en el Navbar (Naranja del logo) */
 
 .navbar-nav .nav-link.active {
-  background-color: #f2b705 !important;
+  background-color: #f37022 !important;
   color: #ffffff !important;
   border-radius: 6px;
   padding-left: 14px !important;
@@ -82,7 +83,7 @@ body {
   box-shadow: none;
 }
 
-/* Corrección responsiva para móviles (Logo grande y espacio perfecto para Agroil) */
+/* Corrección responsiva para móviles */
 @media (max-width: 991.98px) {
   .navbar-brand h3 {
     font-size: 1.1rem !important;
@@ -93,7 +94,7 @@ body {
     gap: 10px !important;
   }
   #inicio {
-    padding-top: 180px !important; /* Espacio superior ampliado en móviles para que Agroil baje y respire perfectamente */
+    padding-top: 140px;
   }
 }
 
@@ -209,5 +210,5 @@ body {
 }
 
 .hover-link:hover {
-  color: #f2b705 !important;
+  color: #f37022 !important;
 }
