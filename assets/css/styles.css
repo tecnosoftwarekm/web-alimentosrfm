@@ -6,7 +6,7 @@ html {
 
 #inicio {
   min-height: 100vh;
-  padding-top: 130px;
+  padding-top: 100px;
   scroll-margin-top: 0px;
 }
 
@@ -82,7 +82,7 @@ body {
   box-shadow: none;
 }
 
-/* Corrección responsiva para móviles */
+/* Corrección responsiva para móviles (Logo grande y espacio perfecto para Agroil) */
 @media (max-width: 991.98px) {
   .navbar-brand h3 {
     font-size: 1.1rem !important;
@@ -93,7 +93,7 @@ body {
     gap: 10px !important;
   }
   #inicio {
-    padding-top: 140px;
+    padding-top: 180px !important; /* Espacio superior ampliado en móviles para que Agroil baje y respire perfectamente */
   }
 }
 
@@ -148,7 +148,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Clase restaurada al formato original con object-fit: cover y altura perfecta */
 .vertical-carousel-img {
   height: 450px !important;
   object-fit: cover !important;
