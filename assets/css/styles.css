@@ -164,7 +164,7 @@ body {
 }
 
 /* ==========================================
-   5. SECCIÓN DE PRODUCTOS (MEJORADA CON FONDO Y BRILLO TRIDIMENSIONAL)
+   5. SECCIÓN DE PRODUCTOS (ESTÉTICA, BORDES REDONDEADOS Y ZOOM)
    ========================================== */
 
 #productos {
@@ -172,45 +172,52 @@ body {
   position: relative;
 }
 
-.product-card {
+.product-card-img-only {
   background: #ffffff;
-  border-radius: 16px !important;
-  border: 1px solid rgba(13, 92, 58, 0.08) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
-  transition: all 0.3s ease-in-out;
-  position: relative;
+  border-radius: 20px !important; /* Bordes redondeados más estéticos */
+  border: 2px solid rgba(13, 92, 58, 0.1) !important; /* Borde sutil y limpio */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04) !important;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 320px;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
 }
 
-/* Efecto de iluminación circular detrás de cada botella en las tarjetas */
-.product-card::before {
+/* Efecto de brillo circular detrás de cada botella */
+.product-card-img-only::before {
   content: '';
   position: absolute;
-  top: 25px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, rgba(243, 112, 34, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(243, 112, 34, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
   z-index: 0;
 }
 
-.product-card img, .product-card .card-body {
+.product-card-img-only img {
+  max-height: 270px;
+  object-fit: contain;
   position: relative;
   z-index: 1;
+  transition: transform 0.4s ease-in-out;
 }
 
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(13, 92, 58, 0.12) !important;
-  border-color: rgba(243, 112, 34, 0.3) !important;
+/* Efecto al pasar el mouse (Hover) */
+.product-card-img-only:hover {
+  transform: translateY(-8px); /* Eleva la tarjeta */
+  box-shadow: 0 18px 40px rgba(13, 92, 58, 0.15) !important;
+  border-color: #f37022 !important; /* El borde cambia al naranja corporativo */
 }
 
-.product-card .card-title {
-  color: #0d5c3a;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+.product-card-img-only:hover img {
+  transform: scale(1.08); /* Acerca la botella de forma elegante */
 }
 
 /* ==========================================
