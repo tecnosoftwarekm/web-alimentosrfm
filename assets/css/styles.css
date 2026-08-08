@@ -49,13 +49,12 @@ body {
   transition: all 0.35s ease-in-out;
 }
 
-/* === SOLUCIÓN DEL LOGO: Tamaño base y escala dinámica === */
+/* === TAMAÑO DEL LOGO LIMPIO (Sin zoom forzado) === */
 #logoNavbar {
   height: 65px !important;
   width: auto !important;
   object-fit: contain;
   transition: all 0.3s ease;
-  transform-origin: left center; /* Alineado a la izquierda para que crezca hacia la derecha */
 }
 
 /* Estado 1: Arriba del todo (Transparente con letras blancas) */
@@ -65,11 +64,6 @@ body {
   -webkit-backdrop-filter: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
-}
-
-/* Hacemos un "Zoom" al logo blanco para compensar su margen transparente */
-.navbar.navbar-transparent #logoNavbar {
-  transform: scale(1.45); 
 }
 
 .navbar.navbar-transparent .navbar-brand h3 {
@@ -110,11 +104,6 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
   padding-top: 12px !important;
   padding-bottom: 12px !important;
-}
-
-/* Regresamos el logo a su escala normal (tamaño original) */
-.navbar.navbar-scrolled #logoNavbar {
-  transform: scale(1);
 }
 
 .navbar.navbar-scrolled .navbar-brand h3 {
