@@ -49,6 +49,14 @@ body {
   transition: all 0.35s ease-in-out;
 }
 
+/* === SOLUCIÓN DEL LOGO: Tamaño fijo para que no salte al cambiar de imagen === */
+#logoNavbar {
+  height: 65px !important;
+  width: auto !important;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
 /* Estado 1: Arriba del todo (Transparente con letras blancas) */
 .navbar.navbar-transparent {
   background: transparent !important;
