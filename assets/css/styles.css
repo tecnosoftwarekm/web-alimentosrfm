@@ -43,26 +43,26 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(10, 25, 40, 0.5) !important; /* Fondo oscuro translúcido estilo Oleica */
+  background: rgba(10, 25, 40, 0.65) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
   z-index: 1050;
   transition: all 0.3s ease;
 }
 
 .navbar-brand img {
-  max-height: 70px;
+  max-height: 65px;
+  width: auto;
 }
 
-/* Textos blancos en el menú superior para que destaquen sobre la imagen */
 .navbar-brand h3 {
   color: #ffffff !important;
 }
 
 .navbar-brand .text-muted {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 .navbar-nav .nav-link-custom {
@@ -84,18 +84,32 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
 .navbar-toggler:focus {
   box-shadow: none;
 }
 
 @media (max-width: 991.98px) {
   .navbar-brand h3 {
-    font-size: 1.1rem !important;
+    font-size: 1.05rem !important;
     white-space: normal !important;
     line-height: 1.2;
   }
   .navbar-brand {
-    gap: 10px !important;
+    gap: 8px !important;
+  }
+  .navbar-collapse {
+    background: rgba(10, 25, 40, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
   }
 }
 
@@ -103,9 +117,9 @@ body {
    3. SECCIÓN HERO (CUBRE TODO DESDE LA PUNTA SUPERIOR)
    ========================================== */
 .hero {
-  background: linear-gradient(rgba(10, 25, 40, 0.75), rgba(10, 25, 40, 0.88)), url('../img/portada.png') center/cover no-repeat;
+  background: linear-gradient(rgba(10, 25, 40, 0.78), rgba(10, 25, 40, 0.88)), url('../img/portada.png') center/cover no-repeat;
   color: white;
-  padding-top: 160px !important; /* Espacio para que el menú fijo no tape el contenido */
+  padding-top: 150px !important;
   padding-bottom: 60px;
   min-height: 100vh;
   margin-top: 0 !important;
@@ -113,20 +127,14 @@ body {
 
 /* Animación y tamaño para la botella flotante */
 @keyframes flotar {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
 }
 
 .botella-flotante {
   animation: flotar 3s ease-in-out infinite;
-  max-height: 520px !important;
+  max-height: 480px !important;
 }
 
 /* Tarjetas inferiores con efecto cristal esmerilado (Blur) */
@@ -139,6 +147,7 @@ body {
   padding: 18px 20px;
   color: #ffffff;
   transition: transform 0.3s ease, background 0.3s ease;
+  height: 100%;
 }
 
 .hero-glass-card:hover {
@@ -223,28 +232,50 @@ body {
 }
 
 /* ==========================================
-   6. BOTÓN FLOTANTE DE WHATSAPP
+   6. BOTÓN FLOTANTE DE WHATSAPP (CORREGIDO Y BLINDADO)
    ========================================== */
 .whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-  z-index: 1000;
+  position: fixed !important;
+  bottom: 25px !important;
+  right: 25px !important;
+  background-color: #25d366 !important;
+  color: white !important;
+  padding: 12px 22px !important;
+  border-radius: 50px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+  z-index: 9999 !important;
+  transition: transform 0.3s ease !important;
 }
 
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+  color: white !important;
+}
+
+/* Limitador estricto para que la imagen de WhatsApp no crezca sin control */
 .whatsapp-btn img {
-  width: 25px;
-  height: 25px;
+  width: 26px !important;
+  height: 26px !important;
+  max-width: 26px !important;
+  max-height: 26px !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+  margin: 0 !important;
+}
+
+/* ==========================================
+   7. FOOTER CORREGIDO
+   ========================================== */
+footer {
+  background-color: #0d5c3a !important;
+  color: white !important;
+  position: relative;
+  z-index: 10;
 }
 
 .hover-link {
