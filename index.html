@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
+<!-- EL ATRIBUTO data-bs-spy ACTIVA EL CAMBIO DE COLOR EN EL MENÚ -->
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" tabindex="0">
-    <!-- NAVBAR DINÁMICA CON CAMBIO AUTOMÁTICO DE LOGO Y ESTILO -->
+    
+    <!-- NAVBAR DINÁMICA -->
     <nav class="navbar navbar-expand-lg navbar-transparent" id="mainNavbar">
         <div class="container-fluid px-lg-4">
-            <a class="navbar-brand d-flex align-items-center gap-3 me-auto" href="#">
-                <!-- LOGO DINÁMICO -->
+            <a class="navbar-brand d-flex align-items-center gap-3 me-auto" href="#inicio">
                 <img id="logoNavbar" src="assets/img/logorfm-blanco1.png" alt="Logo de RFM">
                 <div class="d-flex flex-column">
                     <h3 class="fw-bold m-0 fs-3">Alimentos y Suministros RFM, C.A</h3>
@@ -28,8 +29,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav fw-semibold align-items-center gap-2 ms-auto mt-3 mt-lg-0">
-                    <!-- ENLACES CORREGIDOS PARA QUE EL SCROLLSPY FUNCIONE -->
-                    <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="#inicio">Inicio</a></li>
+                    <!-- ENLACES CORREGIDOS: Solo tienen el #ID para que funcione el seguimiento -->
+                    <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom active" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="#nosotros">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="#proceso">Proceso</a></li>
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="#productos">Productos</a></li>
@@ -359,3 +360,5 @@
 </body>
 
 </html>
+
+Refresca con **Ctrl + F5** y el recuadro naranja irá saltando de sección en sección a medida que bajes por tu página.
