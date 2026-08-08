@@ -13,9 +13,10 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" tabindex="0">
-    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm py-3 navbar-light" id="mainNavbar">
+    <!-- NAVBAR DINÁMICA (TRANSPARENTE ARRIBA Y BLANCA AL BAJAR) -->
+    <nav class="navbar navbar-expand-lg navbar-transparent" id="mainNavbar">
         <div class="container-fluid px-lg-4">
-            <a class="navbar-brand d-flex align-items-center gap-3 text-primary-custom me-auto" href="#" style="color:rgb(3,3,3);">
+            <a class="navbar-brand d-flex align-items-center gap-3 me-auto" href="#">
                 <img src="assets/img/logoRfm.png" width="120" height="120" alt="Logo de RFM" style="object-fit: contain;">
                 <div class="d-flex flex-column">
                     <h3 class="fw-bold m-0 fs-3">Alimentos y Suministros RFM, C.A</h3>
@@ -38,7 +39,7 @@
         </div>
     </nav>
     
-    <!-- PORTADA (HERO) CON TU TÍTULO CLÁSICO + ESTILO OSCURO DE REFERENCIA -->
+    <!-- PORTADA (HERO) -->
     <header class="text-center text-md-start d-flex align-items-center hero" id="inicio">
         <div class="container">
             <div class="row align-items-center">
@@ -56,7 +57,7 @@
                 </div>
             </div>
 
-            <!-- Tarjetas inferiores con efecto cristal esmerilado (Inspirado en la referencia) -->
+            <!-- Tarjetas inferiores con efecto cristal esmerilado -->
             <div class="row g-3 mt-4">
                 <div class="col-md-4">
                     <div class="hero-glass-card">
@@ -321,6 +322,31 @@
             </div>
         </div>
     </footer>
+
+    <!-- SCRIPT DE TRANSICIÓN DINÁMICA DEL MENÚ -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNavbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('navbar-transparent');
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                navbar.classList.add('navbar-transparent');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('mainNavbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('navbar-transparent');
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.add('navbar-transparent');
+            }
+        });
+    </script>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/./embed/js/smart-forms.min.js"></script>
 </body>
