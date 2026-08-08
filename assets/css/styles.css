@@ -4,7 +4,7 @@ html {
 }
 
 #inicio, #nosotros, #proceso, #productos, #instagram, #contacto {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 100px;
 }
 
 body {
@@ -36,10 +36,23 @@ body {
 }
 
 /* ==========================================
-   2. BARRA DE NAVEGACIÓN (NAVBAR)
+   2. BARRA DE NAVEGACIÓN FLOTANTE (SIN FRANJA BLANCA)
    ========================================== */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  z-index: 1050;
+  transition: all 0.3s ease;
+}
+
 .navbar-brand img {
-  max-height: 75px;
+  max-height: 70px;
 }
 
 .navbar-nav .nav-link-custom {
@@ -74,19 +87,18 @@ body {
   .navbar-brand {
     gap: 10px !important;
   }
-  #inicio {
-    padding-top: 180px !important;
-  }
 }
 
 /* ==========================================
-   3. SECCIÓN HERO (ESTILO OSCURO DE REFERENCIA)
+   3. SECCIÓN HERO (CUBRE TODO DESDE ARRIBA)
    ========================================== */
 .hero {
   background: linear-gradient(rgba(10, 25, 40, 0.78), rgba(10, 25, 40, 0.88)), url('../img/portada.png') center/cover no-repeat;
   color: white;
-  padding: 140px 0 60px 0;
-  min-height: 90vh;
+  padding-top: 160px !important; /* Espacio superior para que el menú fijo no tape el contenido */
+  padding-bottom: 60px;
+  min-height: 100vh;
+  margin-top: 0 !important;
 }
 
 /* Animación y tamaño para la botella flotante */
