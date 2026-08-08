@@ -13,11 +13,12 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" tabindex="0">
-    <!-- NAVBAR DINÁMICA (TRANSPARENTE ARRIBA Y BLANCA AL BAJAR) -->
+    <!-- NAVBAR DINÁMICA CON CAMBIO AUTOMÁTICO DE LOGO Y ESTILO -->
     <nav class="navbar navbar-expand-lg navbar-transparent" id="mainNavbar">
         <div class="container-fluid px-lg-4">
             <a class="navbar-brand d-flex align-items-center gap-3 me-auto" href="#">
-                <img src="assets/img/logoRfm.png" width="120" height="120" alt="Logo de RFM" style="object-fit: contain;">
+                <!-- AQUÍ CAMBIA DE LOGO SEGÚN EL SCROLL -->
+                <img id="logoNavbar" src="assets/img/logoRfm-blanco.png" width="120" height="120" alt="Logo de RFM" style="object-fit: contain; transition: opacity 0.3s ease;">
                 <div class="d-flex flex-column">
                     <h3 class="fw-bold m-0 fs-3">Alimentos y Suministros RFM, C.A</h3>
                     <span class="text-muted fw-semibold" style="font-size: 0.85rem; letter-spacing: 0.8px;">RIF: J-50229704-9</span>
@@ -323,26 +324,32 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE TRANSICIÓN DINÁMICA DEL MENÚ -->
+    <!-- SCRIPT DINÁMICO PARA CAMBIO DE LOGO Y ESTILO DEL MENÚ -->
     <script>
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('mainNavbar');
+            const logo = document.getElementById('logoNavbar');
             if (window.scrollY > 50) {
                 navbar.classList.remove('navbar-transparent');
                 navbar.classList.add('navbar-scrolled');
+                logo.src = 'assets/img/logoRfm.png'; // Logo original con fondo para cuando la barra es blanca
             } else {
                 navbar.classList.remove('navbar-scrolled');
                 navbar.classList.add('navbar-transparent');
+                logo.src = 'assets/img/logoRfm-blanco.png'; // Logo adaptado para la parte superior oscura
             }
         });
 
         document.addEventListener('DOMContentLoaded', function() {
             const navbar = document.getElementById('mainNavbar');
+            const logo = document.getElementById('logoNavbar');
             if (window.scrollY > 50) {
                 navbar.classList.remove('navbar-transparent');
                 navbar.classList.add('navbar-scrolled');
+                logo.src = 'assets/img/logoRfm.png';
             } else {
                 navbar.classList.add('navbar-transparent');
+                logo.src = 'assets/img/logoRfm-blanco.png';
             }
         });
     </script>
