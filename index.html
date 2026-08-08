@@ -17,11 +17,11 @@
     <nav class="navbar navbar-expand-lg navbar-transparent" id="mainNavbar">
         <div class="container-fluid px-lg-4">
             <a class="navbar-brand d-flex align-items-center gap-3 me-auto" href="#">
-                <!-- AQUÍ CAMBIA DE LOGO SEGÚN EL SCROLL (ACTUALIZADO AL NUEVO NOMBRE) -->
+                <!-- LOGO DINÁMICO -->
                 <img id="logoNavbar" src="assets/img/logorfm-blanco1.png" alt="Logo de RFM">
                 <div class="d-flex flex-column">
                     <h3 class="fw-bold m-0 fs-3">Alimentos y Suministros RFM, C.A</h3>
-                    <span class="text-muted fw-semibold" style="font-size: 0.85rem; letter-spacing: 0.8px;">RIF: J-50229704-9</span>
+                    <!-- Se eliminó el RIF de aquí para un diseño más limpio -->
                 </div>
             </a>
             <button class="navbar-toggler border-0 shadow-none" data-bs-toggle="collapse" data-bs-target="#navbarNav" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -332,7 +332,7 @@
             if (window.scrollY > 50) {
                 navbar.classList.remove('navbar-transparent');
                 navbar.classList.add('navbar-scrolled');
-                logo.src = 'assets/img/logoRfm.png'; // Logo original con fondo para cuando la barra es blanca
+                logo.src = 'assets/img/logorfm-negro1.png'; // Logo actualizado a negro para cuando la barra es blanca
             } else {
                 navbar.classList.remove('navbar-scrolled');
                 navbar.classList.add('navbar-transparent');
@@ -346,7 +346,7 @@
             if (window.scrollY > 50) {
                 navbar.classList.remove('navbar-transparent');
                 navbar.classList.add('navbar-scrolled');
-                logo.src = 'assets/img/logoRfm.png';
+                logo.src = 'assets/img/logorfm-negro1.png'; // Logo actualizado
             } else {
                 navbar.classList.add('navbar-transparent');
                 logo.src = 'assets/img/logorfm-blanco1.png';
