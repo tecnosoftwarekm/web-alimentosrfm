@@ -36,19 +36,21 @@ body {
 }
 
 /* ==========================================
-   2. BARRA DE NAVEGACIÓN FLOTANTE (TRANSPARENTE SOBRE LA IMAGEN)
+   2. BARRA DE NAVEGACIÓN 100% TRANSPARENTE
    ========================================== */
 .navbar {
   position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(10, 25, 40, 0.65) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
   z-index: 1050;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
   transition: all 0.3s ease;
 }
 
@@ -59,14 +61,17 @@ body {
 
 .navbar-brand h3 {
   color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .navbar-brand .text-muted {
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
 .navbar-nav .nav-link-custom {
   color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   transition: all 0.3s ease;
 }
 
@@ -77,15 +82,17 @@ body {
   padding-left: 14px !important;
   padding-right: 14px !important;
   font-weight: 600;
+  box-shadow: 0 2px 8px rgba(243, 112, 34, 0.4);
 }
 
 .navbar-nav .nav-link-custom:hover {
   color: #f37022 !important;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
 }
 
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .navbar-toggler-icon {
@@ -97,6 +104,12 @@ body {
 }
 
 @media (max-width: 991.98px) {
+  .navbar {
+    background: rgba(10, 25, 40, 0.85) !important;
+    backdrop-filter: blur(10px);
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
   .navbar-brand h3 {
     font-size: 1.05rem !important;
     white-space: normal !important;
@@ -114,12 +127,12 @@ body {
 }
 
 /* ==========================================
-   3. SECCIÓN HERO (CUBRE TODO DESDE LA PUNTA SUPERIOR)
+   3. SECCIÓN HERO (EMPIEZA DESDE ARRIBA DEL TODO)
    ========================================== */
 .hero {
-  background: linear-gradient(rgba(10, 25, 40, 0.78), rgba(10, 25, 40, 0.88)), url('../img/portada.png') center/cover no-repeat;
+  background: linear-gradient(rgba(10, 25, 40, 0.7), rgba(10, 25, 40, 0.85)), url('../img/portada.png') center/cover no-repeat;
   color: white;
-  padding-top: 150px !important;
+  padding-top: 160px !important;
   padding-bottom: 60px;
   min-height: 100vh;
   margin-top: 0 !important;
@@ -257,7 +270,6 @@ body {
   color: white !important;
 }
 
-/* Limitador estricto para que la imagen de WhatsApp no crezca sin control */
 .whatsapp-btn img {
   width: 26px !important;
   height: 26px !important;
@@ -269,7 +281,7 @@ body {
 }
 
 /* ==========================================
-   7. FOOTER CORREGIDO
+   7. FOOTER
    ========================================== */
 footer {
   background-color: #0d5c3a !important;
