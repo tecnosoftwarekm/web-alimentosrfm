@@ -29,6 +29,7 @@
                 <ul class="navbar-nav fw-semibold align-items-center gap-2 ms-auto mt-3 mt-lg-0">
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="index.html#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="index.html#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="index.html#proceso">Proceso</a></li>
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="index.html#productos">Productos</a></li>
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="index.html#instagram">Novedades</a></li>
                     <li class="nav-item"><a class="nav-link rounded px-3 py-2 nav-link-custom" href="index.html#contacto">Contacto</a></li>
@@ -37,17 +38,43 @@
         </div>
     </nav>
     
+    <!-- PORTADA (HERO) CON TU TÍTULO CLÁSICO + ESTILO OSCURO DE REFERENCIA -->
     <header class="text-center text-md-start d-flex align-items-center hero" id="inicio">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <h1 class="fw-bold" style="font-family: 'Fredoka', sans-serif; font-size: 6rem; color: #FFFFFF; text-shadow: 3px 3px 0px #0E6229, 0px 0px 15px rgba(14,98,41,0.5); line-height: 1; margin-bottom: 0.5rem; letter-spacing: 1px;">Agroil</h1>
-                    <h2 class="display-5 fw-bold mb-3 text-white">la mejor calidad para tu hogar</h2>
-                    <p class="lead mb-4 text-white">Procesamos y comercializamos productos con los más altos estándares del mercado nacional.</p>
-                    <a class="btn btn-lg shadow mb-3 mb-md-0 px-4 btn-custom" role="button" href="#contacto" style="background: #f37022; color: white; border: none;">Contáctanos</a>
+                    <h1 class="fw-bold" style="font-family: 'Fredoka', sans-serif; font-size: 5.5rem; color: #FFFFFF; text-shadow: 3px 3px 0px #0E6229, 0px 0px 15px rgba(14,98,41,0.5); line-height: 1.1; margin-bottom: 0.5rem; letter-spacing: 1px;">Agroil</h1>
+                    <h2 class="display-6 fw-bold mb-3 text-white">la mejor calidad para tu hogar</h2>
+                    <p class="lead mb-4 text-white" style="font-size: 1.05rem;">Procesamos y comercializamos productos con los más altos estándares del mercado nacional, garantizando nutrición, rendimiento y sabor insuperable.</p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a class="btn btn-lg shadow px-4 btn-custom" role="button" href="#productos">Explorar Productos</a>
+                        <a class="btn btn-lg shadow px-4 btn-outline-light" role="button" href="#proceso">Nuestro Proceso</a>
+                    </div>
                 </div>
-                <div class="col text-center">
-                    <img class="img-fluid botella-flotante" src="assets/img/agroil3.png" alt="Aceite Agroil" style="max-height: 600px; object-fit: contain;">
+                <div class="col-md-5 text-center">
+                    <img class="img-fluid botella-flotante" src="assets/img/agroil3.png" alt="Aceite Agroil" style="object-fit: contain;">
+                </div>
+            </div>
+
+            <!-- Tarjetas inferiores con efecto cristal esmerilado (Inspirado en la referencia) -->
+            <div class="row g-3 mt-4">
+                <div class="col-md-4">
+                    <div class="hero-glass-card">
+                        <strong class="d-block mb-1 text-warning">100% Puro de Origen</strong>
+                        <span class="small text-white-50">Soya y semillas seleccionadas con rigor.</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="hero-glass-card">
+                        <strong class="d-block mb-1 text-success">Normas COVENIN</strong>
+                        <span class="small text-white-50">Procesamiento higiénico bajo estándares rigurosos.</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="hero-glass-card">
+                        <strong class="d-block mb-1 text-info">Rendimiento Máximo</strong>
+                        <span class="small text-white-50">Fórmula termoestable ideal para freír y cocinar.</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,7 +148,47 @@
         </div>
     </section>
 
-<!-- SECCIÓN DE PRODUCTOS CON NOMBRES ACTUALIZADOS Y LAS ÚLTIMAS 2 TARJETAS CENTRADAS -->
+    <!-- SECCIÓN DE PROCESO INDUSTRIAL -->
+    <section class="py-5 bg-white" id="proceso">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-custom" style="font-size: 2.5rem;">Nuestro Proceso Industrial</h2>
+                <p class="text-muted">Tecnología de vanguardia y rigurosos controles de calidad en cada etapa</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="p-4 border rounded-4 h-100 bg-light shadow-sm">
+                        <div class="text-primary-custom fw-bold fs-3 mb-2">01</div>
+                        <h5 class="fw-bold text-dark">Selección</h5>
+                        <p class="text-muted small mb-0">Recepción y análisis riguroso de materias primas seleccionadas.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4 border rounded-4 h-100 bg-light shadow-sm">
+                        <div class="text-primary-custom fw-bold fs-3 mb-2">02</div>
+                        <h5 class="fw-bold text-dark">Refinación</h5>
+                        <p class="text-muted small mb-0">Procesos de neutralización, blanqueado y desodorización óptima.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4 border rounded-4 h-100 bg-light shadow-sm">
+                        <div class="text-primary-custom fw-bold fs-3 mb-2">03</div>
+                        <h5 class="fw-bold text-dark">Envasado</h5>
+                        <p class="text-muted small mb-0">Líneas automatizadas bajo estrictas normas de inocuidad e higiene.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-4 border rounded-4 h-100 bg-light shadow-sm">
+                        <div class="text-primary-custom fw-bold fs-3 mb-2">04</div>
+                        <h5 class="fw-bold text-dark">Distribución</h5>
+                        <p class="text-muted small mb-0">Logística eficiente para abastecer hogares e industrias a nivel nacional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PRODUCTOS -->
     <section class="bg-light py-5" id="productos">
         <div class="container py-4">
             <div class="text-center mb-5">
