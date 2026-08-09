@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<!-- EL TARGET AHORA APUNTA DIRECTAMENTE A #navbarNav PARA QUE FUNCIONE EL SCROLLSPY -->
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100" tabindex="0">
     
     <nav class="navbar navbar-expand-lg navbar-transparent" id="mainNavbar">
@@ -149,8 +148,8 @@
     </section>
 
     <!-- SECCIÓN DE PROCESO INDUSTRIAL -->
-    <section class="py-5 bg-white" id="proceso">
-        <div class="container py-4">
+    <section class="pt-5 bg-white" id="proceso">
+        <div class="container pt-4">
             <div class="text-center mb-5">
                 <h2 class="fw-bold text-primary-custom" style="font-size: 2.5rem;">Nuestro Proceso Industrial</h2>
                 <p class="text-muted">Tecnología de vanguardia y rigurosos controles de calidad en cada etapa</p>
@@ -182,6 +181,20 @@
                         <div class="text-primary-custom fw-bold fs-3 mb-2">04</div>
                         <h5 class="fw-bold text-dark">Distribución</h5>
                         <p class="text-muted small mb-0">Logística eficiente para abastecer hogares e industrias a nivel nacional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO DEL PROCESO -->
+    <section class="pb-5 bg-white">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="ratio ratio-16x9 shadow-lg rounded-4 overflow-hidden border border-light">
+                        <!-- REEMPLAZA "TU_ID_DE_VIDEO" POR EL ID REAL DE TU VIDEO DE YOUTUBE -->
+                        <iframe src="https://www.youtube.com/embed/1wRxlHEQqQI?rel=0&modestbranding=1" title="Proceso Industrial RFM" allowfullscreen style="border: 0;"></iframe>
                     </div>
                 </div>
             </div>
@@ -228,6 +241,10 @@
                         <img class="img-fluid w-100" src="assets/img/agroil900ml2.png" alt="Agroil 900 ML">
                     </div>
                 </div>
+            </div>
+
+            <!-- Fila 2: Las últimas 2 presentaciones centradas -->
+            <div class="row g-4 justify-content-center">
                 <div class="col-sm-6 col-md-4">
                     <div class="card text-center border-0 h-100 product-card-img-only">
                         <img class="img-fluid w-100" src="assets/img/agroil1lt2.png" alt="Agroil 1 LT">
@@ -244,6 +261,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     
     <section class="py-5" id="instagram">
